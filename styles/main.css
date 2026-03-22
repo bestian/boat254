@@ -7,21 +7,22 @@
     CSS CUSTOM PROPERTIES
 ============================================= */
 :root {
-    --color-deep-navy: #0a1628;
-    --color-navy: #0d1f3c;
-    --color-dark-teal: #1a3a5c;
-    --color-mid-teal: #1e4d6b;
-    --color-light-teal: #2a6080;
-    --color-gold: #d4a017;
-    --color-gold-light: #f0c040;
-    --color-gold-pale: #f7d980;
-    --color-cream: #f5f0e8;
-    --color-cream-dim: #d8d0c0;
-    --color-white: #ffffff;
-    --color-overlay: rgba(10, 22, 40, 0.72);
-    --color-overlay-strong: rgba(10, 22, 40, 0.88);
-    --color-card-bg: rgba(26, 58, 92, 0.55);
-    --color-card-border: rgba(212, 160, 23, 0.3);
+    /* 暖色主題：深可可、赭陶、杏粉（獨立風格，非冷藍／亮金金融感） */
+    --color-deep-navy: #541d01;
+    --color-navy: #784701;
+    --color-dark-teal: #3d2a22;
+    --color-mid-teal: #4d362b;
+    --color-light-teal: #5c4336;
+    --color-gold: #b85c3a;
+    --color-gold-light: #e8a88a;
+    --color-gold-pale: #f5d4c4;
+    --color-cream: #f7ebe3;
+    --color-cream-dim: #c4b0a0;
+    --color-white: #fffaf6;
+    --color-overlay: rgba(26, 18, 14, 0.72);
+    --color-overlay-strong: rgba(26, 18, 14, 0.88);
+    --color-card-bg: rgba(61, 42, 34, 0.55);
+    --color-card-border: rgba(184, 92, 58, 0.32);
 
     --font-serif: 'Noto Serif TC', 'Georgia', serif;
     --font-sans: 'Noto Sans TC', 'Helvetica Neue', sans-serif;
@@ -133,8 +134,8 @@ h1, h2, h3, h4 {
 }
 
 @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(212, 160, 23, 0.4); }
-    50%       { box-shadow: 0 0 0 12px rgba(212, 160, 23, 0); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(184, 92, 58, 0.4); }
+    50%       { box-shadow: 0 0 0 12px rgba(184, 92, 58, 0); }
 }
 
 /* Scroll-triggered entrance using animation-timeline if supported,
@@ -181,8 +182,8 @@ section .reveal {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: rgba(240, 192, 64, 0.25);
-    border: 1px solid rgba(240, 192, 64, 0.4);
+    background: rgba(232, 168, 138, 0.28);
+    border: 1px solid rgba(232, 168, 138, 0.42);
     animation: bubbleRise 4s ease-in infinite;
 }
 
@@ -243,10 +244,10 @@ section .reveal {
     right: 0;
     height: var(--nav-height);
     z-index: 1000;
-    background: rgba(10, 22, 40, 0.92);
+    background: rgba(26, 18, 14, 0.92);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(212, 160, 23, 0.2);
+    border-bottom: 1px solid rgba(184, 92, 58, 0.22);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -325,10 +326,10 @@ section .reveal {
     right: 0;
     z-index: 1001;
     flex-direction: column;
-    background: rgba(10, 22, 40, 0.97);
+    background: rgba(26, 18, 14, 0.97);
     padding: var(--space-md) var(--space-lg);
     gap: var(--space-sm);
-    border-bottom: 1px solid rgba(212, 160, 23, 0.2);
+    border-bottom: 1px solid rgba(184, 92, 58, 0.22);
     }
 
     /* checkbox 與 .nav__links 之間隔了 <nav>，須用後代選擇器 */
@@ -378,9 +379,9 @@ section .reveal {
     inset: 0;
     background: linear-gradient(
     180deg,
-    rgba(10, 22, 40, 0.5) 0%,
-    rgba(10, 22, 40, 0.65) 40%,
-    rgba(10, 22, 40, 0.88) 100%
+    rgba(26, 18, 14, 0.52) 0%,
+    rgba(26, 18, 14, 0.68) 40%,
+    rgba(26, 18, 14, 0.88) 100%
     );
     z-index: 1;
 }
@@ -399,7 +400,7 @@ section .reveal {
     font-weight: 500;
     letter-spacing: 0.2em;
     color: var(--color-gold-light);
-    border: 1px solid rgba(240, 192, 64, 0.5);
+    border: 1px solid rgba(232, 168, 138, 0.5);
     border-radius: 50px;
     padding: 6px 20px;
     margin-bottom: var(--space-md);
@@ -513,7 +514,7 @@ section .reveal {
 
 .btn--primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(212, 160, 23, 0.45);
+    box-shadow: 0 8px 24px rgba(184, 92, 58, 0.42);
     color: var(--color-deep-navy);
 }
 
@@ -552,8 +553,8 @@ section .reveal {
 .hero__scroll-arrow {
     width: 20px;
     height: 20px;
-    border-right: 2px solid rgba(240, 192, 64, 0.6);
-    border-bottom: 2px solid rgba(240, 192, 64, 0.6);
+    border-right: 2px solid rgba(232, 168, 138, 0.58);
+    border-bottom: 2px solid rgba(232, 168, 138, 0.58);
     transform: rotate(45deg);
     animation: waveFloat 1.5s ease-in-out infinite;
 }
@@ -640,7 +641,7 @@ section .reveal {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(212, 160, 23, 0.15), transparent);
+    background: linear-gradient(135deg, rgba(184, 92, 58, 0.16), transparent);
     z-index: 1;
     border-radius: var(--radius-lg);
 }
@@ -663,7 +664,7 @@ section .reveal {
     left: -12px;
     right: 12px;
     bottom: 12px;
-    border: 2px solid rgba(212, 160, 23, 0.3);
+    border: 2px solid rgba(184, 92, 58, 0.32);
     border-radius: var(--radius-lg);
     z-index: 0;
     pointer-events: none;
@@ -705,8 +706,8 @@ section .reveal {
     font-size: 0.82rem;
     padding: 6px 14px;
     border-radius: 50px;
-    background: rgba(212, 160, 23, 0.12);
-    border: 1px solid rgba(212, 160, 23, 0.35);
+    background: rgba(184, 92, 58, 0.12);
+    border: 1px solid rgba(184, 92, 58, 0.34);
     color: var(--color-gold-light);
     font-weight: 500;
 }
@@ -810,7 +811,7 @@ section .reveal {
     background: linear-gradient(
     180deg,
     transparent 50%,
-    rgba(10, 22, 40, 0.75) 100%
+    rgba(26, 18, 14, 0.76) 100%
     );
     opacity: 0;
     transition: opacity var(--transition-base);
@@ -913,7 +914,7 @@ section .reveal {
 .feature-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 16px 40px rgba(0,0,0,0.4);
-    border-color: rgba(240, 192, 64, 0.6);
+    border-color: rgba(232, 168, 138, 0.58);
 }
 
 .feature-card:hover::before {
@@ -1021,7 +1022,7 @@ section .reveal {
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    border: 1px solid rgba(212, 160, 23, 0.2);
+    border: 1px solid rgba(184, 92, 58, 0.22);
     position: relative;
 }
 
@@ -1035,7 +1036,7 @@ section .reveal {
 .location__advantage {
     margin-top: var(--space-lg);
     padding: var(--space-md) var(--space-lg);
-    background: rgba(212, 160, 23, 0.08);
+    background: rgba(184, 92, 58, 0.09);
     border-left: 3px solid var(--color-gold);
     border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
@@ -1074,8 +1075,8 @@ section .reveal {
 }
 
 .pricing-card {
-    background: rgba(10, 22, 40, 0.7);
-    border: 1px solid rgba(212, 160, 23, 0.25);
+    background: rgba(38, 26, 20, 0.72);
+    border: 1px solid rgba(184, 92, 58, 0.26);
     border-radius: var(--radius-md);
     padding: var(--space-lg) var(--space-md);
     text-align: center;
@@ -1086,8 +1087,8 @@ section .reveal {
 }
 
 .pricing-card--featured {
-    border-color: rgba(240, 192, 64, 0.7);
-    background: rgba(10, 22, 40, 0.85);
+    border-color: rgba(232, 168, 138, 0.65);
+    background: rgba(38, 26, 20, 0.86);
     transform: scale(1.03);
 }
 
@@ -1200,7 +1201,7 @@ section .reveal {
 .pricing-card__note {
     margin-top: var(--space-md);
     padding: var(--space-xs) var(--space-sm);
-    background: rgba(212, 160, 23, 0.1);
+    background: rgba(184, 92, 58, 0.11);
     border-radius: var(--radius-sm);
     font-size: 0.8rem;
     color: var(--color-gold-light);
@@ -1210,8 +1211,8 @@ section .reveal {
 .pricing__nonprofit {
     margin-top: var(--space-xl);
     padding: var(--space-lg) var(--space-xl);
-    background: rgba(212, 160, 23, 0.07);
-    border: 1px solid rgba(212, 160, 23, 0.3);
+    background: rgba(184, 92, 58, 0.08);
+    border: 1px solid rgba(184, 92, 58, 0.28);
     border-radius: var(--radius-md);
     display: flex;
     gap: var(--space-lg);
@@ -1308,9 +1309,9 @@ section .reveal {
 }
 
 .contact__method:hover {
-    border-color: rgba(240, 192, 64, 0.6);
+    border-color: rgba(232, 168, 138, 0.58);
     transform: translateX(6px);
-    background: rgba(26, 58, 92, 0.75);
+    background: rgba(72, 48, 38, 0.78);
 }
 
 .contact__method-icon {
@@ -1371,8 +1372,8 @@ section .reveal {
 .form-input,
 .form-textarea {
     width: 100%;
-    background: rgba(10, 22, 40, 0.6);
-    border: 1px solid rgba(212, 160, 23, 0.25);
+    background: rgba(38, 26, 20, 0.62);
+    border: 1px solid rgba(184, 92, 58, 0.26);
     border-radius: var(--radius-sm);
     padding: 12px 16px;
     font-family: var(--font-sans);
@@ -1391,7 +1392,7 @@ section .reveal {
 .form-input:focus,
 .form-textarea:focus {
     border-color: var(--color-gold-light);
-    box-shadow: 0 0 0 3px rgba(240, 192, 64, 0.12);
+    box-shadow: 0 0 0 3px rgba(232, 168, 138, 0.14);
 }
 
 .form-textarea {
@@ -1416,7 +1417,7 @@ section .reveal {
 
 .form-submit:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(212, 160, 23, 0.45);
+    box-shadow: 0 8px 24px rgba(184, 92, 58, 0.42);
 }
 
 .form-submit:active {
@@ -1439,7 +1440,7 @@ section .reveal {
 ============================================= */
 .footer {
     background: var(--color-deep-navy);
-    border-top: 1px solid rgba(212, 160, 23, 0.15);
+    border-top: 1px solid rgba(184, 92, 58, 0.18);
     padding: var(--space-xl) var(--space-lg) var(--space-lg);
     position: relative;
     overflow: hidden;
@@ -1543,7 +1544,7 @@ section .reveal {
 }
 
 .footer__copyright a {
-    color: rgba(240, 192, 64, 0.6);
+    color: rgba(232, 168, 138, 0.62);
 }
 
 .footer__copyright a:hover {
@@ -1616,11 +1617,11 @@ section .reveal {
 .submarine-deco__line {
     width: 80px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(212, 160, 23, 0.5));
+    background: linear-gradient(90deg, transparent, rgba(184, 92, 58, 0.48));
 }
 
 .submarine-deco__line--right {
-    background: linear-gradient(90deg, rgba(212, 160, 23, 0.5), transparent);
+    background: linear-gradient(90deg, rgba(184, 92, 58, 0.48), transparent);
 }
 
 .submarine-deco__icon {
@@ -1633,8 +1634,8 @@ position: fixed;
 top: 28px;
 right: -52px;
 width: 190px;
-background: rgba(220, 38, 38, 0.55);
-color: #fff;
+background: rgba(176, 74, 58, 0.58);
+color: #fff8f4;
 font-family: 'Noto Serif TC', serif;
 font-size: 0.85rem;
 font-weight: 700;

@@ -1,0 +1,50 @@
+// ==================== CONTACT ====================
+section.section.contact#contact
+  .container
+    .section-header.reveal.reveal-1
+      span.section-label 聯絡我們
+      h2.section-title
+        | 與
+        span.text-gold 潛水艇計畫
+        | 連線
+      span.gold-line
+      p.section-subtitle 若你對潛水艇計畫有任何想像、合作或提案，歡迎與我們聯繫！
+
+    .contact__inner
+      .contact__info.reveal.reveal-1
+        p.contact__cta-text
+          | 無論是場地租借、藝術合作、非營利提案，還是任何有趣的想法——小船254號的門總是為有夢想的人敞開。
+
+        .contact__methods
+          a.contact__method(href="mailto:urbanboat254@gmail.com")
+            span.contact__method-icon ✉️
+            div
+              .contact__method-label 電子郵件
+              .contact__method-value urbanboat254@gmail.com
+          a.contact__method(href="tel:0988553720")
+            span.contact__method-icon 📞
+            div
+              .contact__method-label 電話
+              .contact__method-value 0988-553-720
+          .contact__method
+            span.contact__method-icon 🏠
+            div
+              .contact__method-label 聯絡窗口
+              .contact__method-value 小船254號
+
+      .contact__form-wrap.reveal.reveal-2
+        h3.contact__form-title 傳送訊息給我們
+        form(action="mailto:urbanboat254@gmail.com" method="get" enctype="text/plain" novalidate)
+          .form-group
+            label.form-label(for="name") 您的姓名
+            input.form-input#name(type="text" name="name" placeholder="請輸入您的姓名" required)
+          .form-group
+            label.form-label(for="email") 電子郵件
+            input.form-input#email(type="email" name="email" placeholder="your@email.com" required)
+          .form-group
+            label.form-label(for="subject") 主旨
+            input.form-input#subject(type="text" name="subject" placeholder="場地租借 / 合作洽詢 / 其他")
+          .form-group
+            label.form-label(for="message") 訊息內容
+            textarea.form-textarea#message(name="body" placeholder="請描述您的需求、活動日期或任何想法……" required)
+          button.form-submit(type="submit") 🚀 送出訊息

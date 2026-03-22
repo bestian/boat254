@@ -1,0 +1,41 @@
+// ==================== HERO ====================
+section.hero#hero(aria-label="首頁橫幅")
+  .hero__bg(aria-hidden="true")
+  .hero__overlay(aria-hidden="true")
+
+  // Bubbles decoration
+  .bubbles(aria-hidden="true")
+    each _ in [1,2,3,4,5,6]
+      span.bubble
+
+  .hero__content
+    span.hero__badge 台北士林 · 後港里 · B1
+
+    h1.hero__title
+      | 小船
+      span.hero__title-accent 254
+      br
+      | 潛水艇計畫空間
+
+    .hero__divider(aria-hidden="true")
+      span.hero__divider-line
+      span.hero__divider-icon 🌊
+      span.hero__divider-line.hero__divider-line--right
+
+    p.hero__tagline 在士林後港里，一個深潛創作的地下空間
+
+    .hero__meta
+      span.hero__meta-item
+        span.hero__meta-icon 📍
+        | 台北市士林區福港街254號B1
+      span.hero__meta-item
+        span.hero__meta-icon 🚇
+        | 捷運劍潭站3號出口，步行約12分鐘
+
+    .hero__cta
+      a.btn.btn--primary(href="#about") 探索空間
+      a.btn.btn--outline(href="#contact") 立即洽詢
+
+  .hero__scroll-indicator(aria-hidden="true")
+    span.hero__scroll-text Scroll
+    span.hero__scroll-arrow

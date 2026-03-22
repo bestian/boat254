@@ -1,0 +1,19 @@
+// ==================== NAVIGATION ====================
+input#nav-toggle(type="checkbox" style="display:none;")
+nav.nav(role="navigation" aria-label="主導覽")
+  .nav__logo
+    span ⚓
+    span
+      | 小船
+      span.nav__logo-accent 254
+  label.nav__menu-toggle(for="nav-toggle" aria-label="開啟選單" aria-expanded="false" aria-controls="nav-menu")
+    span
+    span
+    span
+  ul.nav__links#nav-menu
+    li: a(href="#about") 關於空間
+    li: a(href="#gallery") 場地照片
+    li: a(href="#features") 特色設施
+    li: a(href="#pricing") 租借費用
+    li: a(href="#location") 交通位置
+    li: a(href="#contact") 聯絡我們

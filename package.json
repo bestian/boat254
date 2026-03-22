@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "node scripts/build-html.js"
+  },
   "dependencies": {
     "pug": "^3.0.4"
   }

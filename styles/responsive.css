@@ -1,0 +1,181 @@
+/* =============================================
+   平板與手機 — 覆寫／補強（載入於 main.css 之後）
+============================================= */
+
+/* 避免 iOS 自動放大表單字級 */
+@media (max-width: 768px) {
+    .form-input,
+    .form-textarea {
+        font-size: 1rem;
+    }
+}
+
+/* ---------- 平板（直向／小筆電） ---------- */
+@media (max-width: 1024px) {
+    .section {
+        padding-left: var(--space-md);
+        padding-right: var(--space-md);
+    }
+
+    .hero__content {
+        padding-left: var(--space-md);
+        padding-right: var(--space-md);
+    }
+
+    .gallery__grid {
+        gap: 8px;
+    }
+}
+
+/* ---------- 手機與小平板 ---------- */
+@media (max-width: 768px) {
+    body {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+
+    .nav {
+        padding-left: max(var(--space-md), env(safe-area-inset-left));
+        padding-right: max(var(--space-md), env(safe-area-inset-right));
+    }
+
+    .hero {
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+
+    .hero__content {
+        padding-top: calc(var(--nav-height) + var(--space-lg));
+        padding-bottom: var(--space-lg);
+    }
+
+    .hero__title {
+        font-size: clamp(2rem, 10vw, 3.2rem);
+    }
+
+    .hero__meta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero__meta-item {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero__cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero__cta .btn {
+        width: 100%;
+        justify-content: center;
+        min-height: 48px;
+    }
+
+    .hero__scroll-indicator {
+        bottom: max(var(--space-md), env(safe-area-inset-bottom));
+    }
+
+    .section-header {
+        margin-bottom: var(--space-lg);
+    }
+
+    .section-title {
+        font-size: clamp(1.5rem, 6vw, 2.2rem);
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+        padding: 0 var(--space-xs);
+    }
+
+    .pricing__grid {
+        max-width: 100%;
+    }
+
+    .pricing-card--featured::after {
+        font-size: 0.68rem;
+        padding: 3px 32px;
+    }
+
+    .footer {
+        padding-bottom: max(var(--space-lg), env(safe-area-inset-bottom));
+    }
+
+    .footer__bottom {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    /* 樣稿標籤：小螢幕避免擋到導覽列 */
+    .draft-ribbon {
+        top: 22px;
+        right: -48px;
+        width: 160px;
+        font-size: 0.75rem;
+    }
+}
+
+/* ---------- 窄螢幕手機 ---------- */
+@media (max-width: 480px) {
+    html {
+        font-size: 15px;
+    }
+
+    .section {
+        padding-top: var(--space-xl);
+        padding-bottom: var(--space-xl);
+    }
+
+    .hero__badge {
+        font-size: 0.68rem;
+        padding: 5px 14px;
+        letter-spacing: 0.12em;
+    }
+
+    .hero__tagline {
+        font-size: 0.95rem;
+        letter-spacing: 0.04em;
+    }
+
+    .about__description {
+        font-size: 1rem;
+    }
+
+    .about__stat-value {
+        font-size: 1.65rem;
+    }
+
+    .gallery__item img {
+        min-height: 140px;
+    }
+
+    .feature-card {
+        padding: var(--space-md);
+    }
+
+    .feature-card__icon {
+        font-size: 2rem;
+    }
+
+    .contact__method {
+        min-height: 48px;
+    }
+
+    .form-submit {
+        min-height: 48px;
+    }
+}
+
+/* ---------- 減少動態效果（系統偏好） ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

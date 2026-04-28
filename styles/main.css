@@ -360,7 +360,7 @@ section .reveal {
 .hero__bg {
     position: absolute;
     inset: 0;
-    background-image: url('IMG_5791_resized.jpg');
+    background-image: url('../img_for_prototype/IMG_5791_resized.jpg');
     background-size: cover;
     background-position: center 40%;
     background-repeat: no-repeat;

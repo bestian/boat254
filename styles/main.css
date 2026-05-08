@@ -1266,6 +1266,56 @@ section .reveal {
 }
 
 /* =============================================
+    BOOKING CALENDAR SECTION
+============================================= */
+.booking-calendar__embed {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border: 1px solid rgba(184, 92, 58, 0.22);
+    position: relative;
+}
+
+.booking-calendar__embed iframe {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    border: none;
+}
+
+.booking-calendar__fallback {
+    max-width: 800px;
+    margin: var(--space-md) auto 0;
+    color: var(--color-cream-dim);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.booking-calendar__fallback a {
+    color: var(--color-gold-light);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+    .booking-calendar__embed iframe {
+        height: 480px;
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-calendar__embed iframe {
+        height: 400px;
+    }
+}
+
+/* =============================================
     CONTACT SECTION
 ============================================= */
 .contact {
@@ -1381,6 +1431,7 @@ section .reveal {
     color: var(--color-cream);
     outline: none;
     transition: border-color var(--transition-base), box-shadow var(--transition-base);
+    appearance: none;
     -webkit-appearance: none;
 }
 

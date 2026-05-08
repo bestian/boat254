@@ -1,0 +1,31 @@
+// ==================== BOOKING CALENDAR ====================
+section.section.booking-calendar.section--dark#booking-calendar
+  .container
+    .section-header.reveal.reveal-1
+      span.section-label 預約時段查詢
+      h2.section-title
+        | 即時查看
+        span.text-gold 已預約檔期
+      span.gold-line
+      p.section-subtitle 以下為空間的 Google 日曆，可瀏覽目前已預約時段；實際租借與檔期確認請透過下方「聯絡我們」與我們洽詢。
+
+    .booking-calendar__embed.reveal.reveal-2
+      iframe(
+        src="https://calendar.google.com/calendar/embed?src=e4031948e44d535a054d194bf8d8ba66635a6665b5664e0d7e68eb70b46f8087%40group.calendar.google.com&ctz=Asia%2FTaipei"
+        style="border: 0"
+        width="800"
+        height="600"
+        frameborder="0"
+        scrolling="no"
+        title="潛水艇計畫空間已預約時段"
+      )
+    p.booking-calendar__fallback.reveal.reveal-2
+      | 若日曆無法正常顯示，請使用 Chrome 瀏覽器查看，
+      br
+      | 或
+      a(
+        href="https://calendar.google.com/calendar/embed?src=e4031948e44d535a054d194bf8d8ba66635a6665b5664e0d7e68eb70b46f8087%40group.calendar.google.com&ctz=Asia%2FTaipei"
+        target="_blank"
+        rel="noopener noreferrer"
+      ) 直接開啟此 Google 日曆
+      | 。

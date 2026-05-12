@@ -2,6 +2,10 @@
    平板與手機 — 覆寫／補強（載入於 main.css 之後）
 ============================================= */
 
+.mobile-only, .xl-only {
+    display: none;
+}
+
 /* 避免 iOS 自動放大表單字級 */
 @media (max-width: 768px) {
     .form-input,
@@ -10,8 +14,17 @@
     }
 }
 
+
+@media (min-width: 1025px) {
+    .xl-only {
+        display: block;
+    }
+}
+
 /* ---------- 平板（直向／小筆電） ---------- */
 @media (max-width: 1024px) {
+
+
     .section {
         padding-left: var(--space-md);
         padding-right: var(--space-md);
@@ -29,6 +42,11 @@
 
 /* ---------- 手機與小平板 ---------- */
 @media (max-width: 768px) {
+
+    .mobile-only {
+        display: block;
+    }
+
     body {
         padding-left: env(safe-area-inset-left);
         padding-right: env(safe-area-inset-right);

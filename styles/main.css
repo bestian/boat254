@@ -158,6 +158,22 @@ h1, h2, h3, h4 {
 .reveal-5  { animation-delay: 0.5s; }
 .reveal-6  { animation-delay: 0.6s; }
 
+/* =============================================
+    TEXT ALIGN
+============================================= */
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
 /* We trigger animations by section targeting */
 section .reveal {
     animation-play-state: running;
@@ -263,6 +279,13 @@ section .reveal {
     display: flex;
     align-items: center;
     gap: var(--space-xs);
+}
+
+.nav__logo-sub {
+    font-size: 0.8rem;
+    color: var(--color-cream-dim);
+    letter-spacing: 0.05em;
+    font-weight: 400;
 }
 
 .nav__logo-accent {
@@ -413,6 +436,16 @@ section .reveal {
     font-size: clamp(2.8rem, 7vw, 5.5rem);
     font-weight: 900;
     color: var(--color-white);
+    letter-spacing: 0.02em;
+    line-height: 1.15;
+    animation: fadeInDown 0.9s ease 0.4s both;
+}
+
+.hero__title-sub {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+    font-weight: 700;
+    color: var(--color-cream);
     letter-spacing: 0.02em;
     line-height: 1.15;
     animation: fadeInDown 0.9s ease 0.4s both;

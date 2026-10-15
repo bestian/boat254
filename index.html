@@ -17,6 +17,7 @@
     <title>小船254 | 潛水艇計畫空間</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/rental-calculator.css">
   </head>
   <body>
     <!-- ==================== NAVIGATION ====================-->
@@ -220,6 +221,59 @@
         <p class="booking-calendar__fallback reveal reveal-2">若日曆無法正常顯示，請使用 Chrome 瀏覽器查看，<br>或<a href="https://calendar.google.com/calendar/embed?src=e4031948e44d535a054d194bf8d8ba66635a6665b5664e0d7e68eb70b46f8087%40group.calendar.google.com&amp;ctz=Asia%2FTaipei" target="_blank" rel="noopener noreferrer">直接開啟此 Google 日曆</a>。</p>
       </div>
     </section>
+    <!-- ==================== RENTAL CALCULATOR ====================-->
+    <section class="section section--teal rental-calculator" id="rental-calculator" aria-labelledby="rental-calculator-title">
+      <div class="container">
+        <div class="section-header"><span class="section-label">潛水艇計畫 · 租借費用試算</span>
+          <h2 class="section-title" id="rental-calculator-title">先選時段<span class="text-gold">即時試算</span></h2><span class="gold-line"></span>
+          <p class="section-subtitle">選擇方案、租借時段與活動性質，快速了解預估費用。</p>
+        </div>
+        <div class="rental-calculator__panel">
+          <form class="rental-calculator__form" id="rental-calculator-form" aria-describedby="rental-calculator-rules">
+            <fieldset class="rental-calculator__fields" disabled>
+              <legend>填寫租借條件</legend>
+              <div class="rental-calculator__field">
+                <label for="rental-plan">租借方案</label>
+                <select id="rental-plan" name="plan" aria-describedby="rental-calculator-rules">
+                  <option value="weekday">平日方案（週一至週五）</option>
+                  <option value="weekend">假日方案（週六、週日）</option>
+                  <option value="four-hour">4 小時方案（假日連續 4 小時）</option>
+                </select>
+              </div>
+              <div class="rental-calculator__times">
+                <div class="rental-calculator__field">
+                  <label for="rental-start">開始時間</label>
+                  <input id="rental-start" type="time" name="start" step="60" required aria-describedby="rental-time-help rental-quote-message">
+                </div>
+                <div class="rental-calculator__field">
+                  <label for="rental-end">結束時間</label>
+                  <input id="rental-end" type="time" name="end" step="60" required aria-describedby="rental-time-help rental-quote-message">
+                </div>
+              </div>
+              <p class="rental-calculator__help" id="rental-time-help">請填寫同一天的時間；目前僅試算整小時租借，不自動進位。跨日或非整小時請另洽。</p>
+              <label class="rental-calculator__checkbox" for="rental-nonprofit">
+                <input id="rental-nonprofit" type="checkbox" name="nonprofit"><span>非營利組織／活動（優惠資格需洽詢確認）</span>
+              </label>
+            </fieldset>
+          </form>
+          <div class="rental-calculator__result" role="status" aria-live="polite" aria-atomic="true">
+            <h3>預估租借費用</h3>
+            <output class="rental-calculator__amount" id="rental-quote-total" for="rental-plan rental-start rental-end rental-nonprofit">—</output>
+            <p id="rental-quote-message">請啟用 JavaScript，並填寫租借條件以試算費用。</p>
+            <p class="rental-calculator__help" id="rental-quote-detail"></p>
+            <p class="rental-calculator__help" id="rental-quote-notice"></p>
+          </div>
+          <noscript>
+            <p class="rental-calculator__help">請啟用 JavaScript 以使用費用試算；也可依上方價目表，透過下方「聯絡我們」洽詢。</p>
+          </noscript>
+        </div>
+        <div class="rental-calculator__rules" id="rental-calculator-rules">
+          <p>平日 NT$350／小時；假日 NT$400／小時，非營利 NT$300／小時；假日連續 4 小時 NT$1,600，非營利 NT$1,200。</p>
+          <p>平日非營利以公開原價試算，合作優惠另洽。4 小時方案僅試算恰好 4 小時，其他時長請改選每小時方案或洽詢。</p>
+          <p><strong>本試算不會送出預約，也不會檢查日曆空檔。</strong> 實際檔期、優惠資格與最終費用，請透過<a href="#contact">聯絡我們</a>確認。</p>
+        </div>
+      </div>
+    </section>
     <!-- ==================== CONTACT ====================-->
     <section class="section contact" id="contact">
       <div class="container">
@@ -303,5 +357,6 @@
       </div>
     </footer>
     <script src="js/index.js" defer></script>
+    <script type="module" src="js/rental-calculator.mjs"></script>
   </body>
 </html>

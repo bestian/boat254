@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "node scripts/build-html.js"
+    "build": "node scripts/build-html.js",
+    "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
     "pug": "^3.0.4"

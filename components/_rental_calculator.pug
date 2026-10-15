@@ -1,0 +1,50 @@
+// ==================== RENTAL CALCULATOR ====================
+section.section.section--teal.rental-calculator#rental-calculator(aria-labelledby="rental-calculator-title")
+  .container
+    .section-header
+      span.section-label 潛水艇計畫 · 租借費用試算
+      h2.section-title#rental-calculator-title
+        | 先選時段
+        span.text-gold 即時試算
+      span.gold-line
+      p.section-subtitle 選擇方案、租借時段與活動性質，快速了解預估費用。
+
+    .rental-calculator__panel
+      form.rental-calculator__form#rental-calculator-form(aria-describedby="rental-calculator-rules")
+        fieldset.rental-calculator__fields(disabled)
+          legend 填寫租借條件
+          .rental-calculator__field
+            label(for="rental-plan") 租借方案
+            select#rental-plan(name="plan" aria-describedby="rental-calculator-rules")
+              option(value="weekday") 平日方案（週一至週五）
+              option(value="weekend") 假日方案（週六、週日）
+              option(value="four-hour") 4 小時方案（假日連續 4 小時）
+          .rental-calculator__times
+            .rental-calculator__field
+              label(for="rental-start") 開始時間
+              input#rental-start(type="time" name="start" step="60" required aria-describedby="rental-time-help rental-quote-message")
+            .rental-calculator__field
+              label(for="rental-end") 結束時間
+              input#rental-end(type="time" name="end" step="60" required aria-describedby="rental-time-help rental-quote-message")
+          p.rental-calculator__help#rental-time-help 請填寫同一天的時間；目前僅試算整小時租借，不自動進位。跨日或非整小時請另洽。
+          label.rental-calculator__checkbox(for="rental-nonprofit")
+            input#rental-nonprofit(type="checkbox" name="nonprofit")
+            span 非營利組織／活動（優惠資格需洽詢確認）
+
+      .rental-calculator__result(role="status" aria-live="polite" aria-atomic="true")
+        h3 預估租借費用
+        output.rental-calculator__amount#rental-quote-total(for="rental-plan rental-start rental-end rental-nonprofit") —
+        p#rental-quote-message 請啟用 JavaScript，並填寫租借條件以試算費用。
+        p.rental-calculator__help#rental-quote-detail
+        p.rental-calculator__help#rental-quote-notice
+      noscript
+        p.rental-calculator__help 請啟用 JavaScript 以使用費用試算；也可依上方價目表，透過下方「聯絡我們」洽詢。
+
+    .rental-calculator__rules#rental-calculator-rules
+      p 平日 NT$350／小時；假日 NT$400／小時，非營利 NT$300／小時；假日連續 4 小時 NT$1,600，非營利 NT$1,200。
+      p 平日非營利以公開原價試算，合作優惠另洽。4 小時方案僅試算恰好 4 小時，其他時長請改選每小時方案或洽詢。
+      p
+        strong 本試算不會送出預約，也不會檢查日曆空檔。
+        |  實際檔期、優惠資格與最終費用，請透過
+        a(href="#contact") 聯絡我們
+        | 確認。

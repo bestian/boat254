@@ -75,3 +75,11 @@ python3 -m http.server 5173
 ```bash
 npm test
 ```
+
+## Google 預約表單
+
+- `components/_booking_form.pug`：在費用試算下方、聯絡我們上方內嵌公開 Google 表單，提供另開填答頁的備用連結。
+- `styles/booking-form.css`：表單外框及響應式寬高；表單內容由 Google 管理，不以網站 CSS 或 JavaScript 修改。
+- 預覽錨點為 `#booking-form`。iframe 使用 `embedded=true` 與延遲載入，保留表單內部捲動；不自動帶入試算資料，也不新增套件。
+- 更換表單時，同步修改 iframe 的 `src` 與備用連結的 `href`，再執行 `npm run build`。填答權限、題目、回覆及通知請至 Google 表單管理。
+- 目前表單內費率與網站價目表／試算規則不同（包含平日晚間、4 小時及日租方案）。本次內嵌未變更計價規則，區塊已提示填寫者詳閱表單說明，最終費用仍由場地方確認。

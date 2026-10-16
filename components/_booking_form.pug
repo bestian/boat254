@@ -7,9 +7,13 @@ section.section.section--dark.booking-form#booking-form(aria-labelledby="booking
         | 填寫表單
         span.text-gold 申請預約
       span.gold-line
-      p.section-subtitle 可直接在下方 Google 表單內填寫預約申請，不會自動帶入上方試算資料。送出後仍需由場地方確認檔期與費用。
+      p.section-subtitle.booking-form__instructions#booking-form-instructions
+        | 可直接在下方填寫預約表單，送出後仍須由場地方確認檔期與費用，場地資訊與方案請參考
+        a(href="img_202611/小船254透明定價方案.png" target="_blank" rel="noopener noreferrer") 附檔
+        | ，上方試算表僅供參考，實際費用以預約確認信為準，如有任何疑問，歡迎
+        a(href="#contact") 與我們聯繫
+        | 。
 
-    p.booking-form__instructions#booking-form-instructions 請在表單內向下捲動，詳閱方案費率及使用規範，再依步驟填寫。上方試算僅供參考，實際費用請以表單說明及場地方確認為準。
     .booking-form__embed
       iframe(
         src="https://docs.google.com/forms/d/e/1FAIpQLSd_rkPDR2x-OFtjLa94d8sTnBDbFRZTDbxzkChMmurdMmFuhw/viewform?embedded=true"

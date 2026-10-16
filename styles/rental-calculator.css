@@ -35,8 +35,7 @@
     color: var(--color-gold-pale);
 }
 
-.rental-calculator__field input,
-.rental-calculator__field select {
+.rental-calculator__field input {
     display: block;
     width: 100%;
     min-width: 0;
@@ -51,9 +50,7 @@
     font-size: 1rem;
 }
 
-.rental-calculator__field input:focus-visible,
-.rental-calculator__field select:focus-visible,
-.rental-calculator__checkbox input:focus-visible {
+.rental-calculator__field input:focus-visible {
     outline: 2px solid var(--color-gold-light);
     outline-offset: 3px;
 }
@@ -66,22 +63,6 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-sm);
-}
-
-.rental-calculator__checkbox {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--space-xs);
-    margin-top: var(--space-md);
-    cursor: pointer;
-}
-
-.rental-calculator__checkbox input {
-    flex-shrink: 0;
-    width: 20px;
-    height: 20px;
-    margin-top: 4px;
-    accent-color: var(--color-gold-light);
 }
 
 .rental-calculator__result {

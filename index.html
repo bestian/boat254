@@ -161,7 +161,7 @@
           <div class="pricing-card reveal reveal-1">
             <div class="pricing-card__glow"></div><span class="pricing-card__icon">🌙</span>
             <h3 class="pricing-card__title">平日方案</h3>
-            <p class="pricing-card__period">週一至週五</p>
+            <p class="pricing-card__period">週一至週五 18:00 前</p>
             <div class="pricing-card__price"><span class="pricing-card__currency">NT$</span><span class="pricing-card__amount">350</span><span class="pricing-card__unit">/ 小時</span></div>
             <div class="pricing-card__divider"></div>
             <ul class="pricing-card__perks">
@@ -173,38 +173,37 @@
           </div>
           <div class="pricing-card pricing-card--featured reveal reveal-2">
             <div class="pricing-card__glow"></div><span class="pricing-card__icon">☀️</span>
-            <h3 class="pricing-card__title">假日方案</h3>
-            <p class="pricing-card__period">週六、週日</p>
+            <h3 class="pricing-card__title">晚間／週末方案</h3>
+            <p class="pricing-card__period">平日 18:00 起、週末全天</p>
             <div class="pricing-card__price"><span class="pricing-card__currency">NT$</span><span class="pricing-card__amount">400</span><span class="pricing-card__unit">/ 小時</span></div>
             <div class="pricing-card__divider"></div>
             <ul class="pricing-card__perks">
               <li>全場獨立使用</li>
               <li>落地鏡面、木質地板</li>
-              <li>假日人潮活躍社區</li>
-              <li>適合公開展演活動</li>
+              <li>跨 18:00 自動分段計費</li>
+              <li>可搭配優惠時段折抵</li>
             </ul>
-            <p class="pricing-card__note">非營利組織假日：NT$300 / 小時</p>
           </div>
           <div class="pricing-card reveal reveal-3">
             <div class="pricing-card__glow"></div><span class="pricing-card__icon">⏱️</span>
-            <h3 class="pricing-card__title">4小時方案</h3>
-            <p class="pricing-card__period">假日連續 4 小時</p>
-            <div class="pricing-card__price"><span class="pricing-card__currency">NT$</span><span class="pricing-card__amount">1,600</span><span class="pricing-card__unit">/ 4小時</span></div>
+            <h3 class="pricing-card__title">優惠時段方案</h3>
+            <p class="pricing-card__period">完整涵蓋指定時段</p>
+            <div class="pricing-card__price"><span class="pricing-card__currency">NT$</span><span class="pricing-card__amount">100</span><span class="pricing-card__unit">元折抵</span></div>
             <div class="pricing-card__divider"></div>
             <ul class="pricing-card__perks">
-              <li>連續 4 小時包段</li>
-              <li>全場獨立使用</li>
-              <li>適合完整排練行程</li>
-              <li>可分攤團隊費用</li>
+              <li>09:00–13:00</li>
+              <li>13:30–17:30</li>
+              <li>18:00–22:00</li>
+              <li>連續滿 8 小時可折 NT$250</li>
             </ul>
-            <p class="pricing-card__note">非營利組織 4 小時：NT$1,200</p>
+            <p class="pricing-card__note">每次租借擇一優惠，不重複折抵</p>
           </div>
         </div>
         <div class="pricing__nonprofit reveal reveal-4">
           <div class="pricing__nonprofit-icon">🤝</div>
           <div>
             <h3 class="pricing__nonprofit-title">非營利組織優惠方案</h3>
-            <p class="pricing__nonprofit-text">非營利組織可洽談合作專案，享有<strong style="color: var(--color-gold-light);">七五折優惠</strong>——假日每小時 NT$300、4 小時 NT$1,200。<br>歡迎主動聯繫討論長期合作！</p>
+            <p class="pricing__nonprofit-text">非營利組織可洽談合作專案，優惠資格與費用由場地方確認。<br>歡迎主動聯繫討論長期合作！</p>
           </div>
         </div>
       </div>
@@ -227,19 +226,15 @@
       <div class="container">
         <div class="section-header"><span class="section-label">潛水艇計畫 · 租借費用試算</span>
           <h2 class="section-title" id="rental-calculator-title">先選時段<span class="text-gold">即時試算</span></h2><span class="gold-line"></span>
-          <p class="section-subtitle">選擇方案、租借時段與活動性質，快速了解預估費用。</p>
+          <p class="section-subtitle">填寫借用日期與起訖時間，自動計算平日、週末費率及適用優惠。</p>
         </div>
         <div class="rental-calculator__panel">
           <form class="rental-calculator__form" id="rental-calculator-form" aria-describedby="rental-calculator-rules">
             <fieldset class="rental-calculator__fields" disabled>
               <legend>填寫租借條件</legend>
               <div class="rental-calculator__field">
-                <label for="rental-plan">租借方案</label>
-                <select id="rental-plan" name="plan" aria-describedby="rental-calculator-rules">
-                  <option value="weekday">平日方案（週一至週五）</option>
-                  <option value="weekend">假日方案（週六、週日）</option>
-                  <option value="four-hour">4 小時方案（假日連續 4 小時）</option>
-                </select>
+                <label for="rental-date">借用日期</label>
+                <input id="rental-date" type="date" name="date" required aria-describedby="rental-quote-message">
               </div>
               <div class="rental-calculator__times">
                 <div class="rental-calculator__field">
@@ -252,14 +247,11 @@
                 </div>
               </div>
               <p class="rental-calculator__help" id="rental-time-help">請填寫同一天的時間；目前僅試算整小時租借，不自動進位。跨日或非整小時請另洽。</p>
-              <label class="rental-calculator__checkbox" for="rental-nonprofit">
-                <input id="rental-nonprofit" type="checkbox" name="nonprofit"><span>非營利組織／活動（優惠資格需洽詢確認）</span>
-              </label>
             </fieldset>
           </form>
           <div class="rental-calculator__result" role="status" aria-live="polite" aria-atomic="true">
             <h3>預估租借費用</h3>
-            <output class="rental-calculator__amount" id="rental-quote-total" for="rental-plan rental-start rental-end rental-nonprofit">—</output>
+            <output class="rental-calculator__amount" id="rental-quote-total" for="rental-date rental-start rental-end">—</output>
             <p id="rental-quote-message">請啟用 JavaScript，並填寫租借條件以試算費用。</p>
             <p class="rental-calculator__help" id="rental-quote-detail"></p>
             <p class="rental-calculator__help" id="rental-quote-notice"></p>
@@ -269,9 +261,12 @@
           </noscript>
         </div>
         <div class="rental-calculator__rules" id="rental-calculator-rules">
-          <p>平日 NT$350／小時；假日 NT$400／小時，非營利 NT$300／小時；假日連續 4 小時 NT$1,600，非營利 NT$1,200。</p>
-          <p>平日非營利以公開原價試算，合作優惠另洽。4 小時方案僅試算恰好 4 小時，其他時長請改選每小時方案或洽詢。</p>
-          <p><strong>本試算不會送出預約，也不會檢查日曆空檔。</strong> 實際檔期、優惠資格與最終費用，請透過<a href="#contact">聯絡我們</a>確認。</p>
+          <p>基本費：週一至週五 18:00 前 NT$350／小時；18:00 起及週末全天 NT$400／小時。跨 18:00 依各費率的實際分鐘分拆計算，加總金額無條件進位至整元，再扣除適用優惠。</p>
+          <p>優惠時段方案：09:00–13:00、13:30–17:30、18:00–22:00。</p>
+          <p>完整涵蓋優惠時段折 NT$100；連續滿 8 小時折 NT$250。每次租借擇一優惠、不累加。</p>
+          <p>本試算表僅提供參考，實際費用會透過預約確認信提供。</p>
+          <p>本試算表不等於場租預約，請填寫下方<a href="#booking-form">預約表單</a>，收到表單後會有工作夥伴與您聯繫。</p>
+          <p>如對於場租有任何疑問，歡迎<a href="#contact">與我們聯繫</a>。</p>
         </div>
       </div>
     </section>
@@ -280,9 +275,8 @@
       <div class="container">
         <div class="section-header"><span class="section-label">潛水艇計畫 · 線上預約申請</span>
           <h2 class="section-title" id="booking-form-title">填寫表單<span class="text-gold">申請預約</span></h2><span class="gold-line"></span>
-          <p class="section-subtitle">可直接在下方 Google 表單內填寫預約申請，不會自動帶入上方試算資料。送出後仍需由場地方確認檔期與費用。</p>
+          <p class="section-subtitle booking-form__instructions" id="booking-form-instructions">可直接在下方填寫預約表單，送出後仍須由場地方確認檔期與費用，場地資訊與方案請參考<a href="img_202611/小船254透明定價方案.png" target="_blank" rel="noopener noreferrer">附檔</a>，上方試算表僅供參考，實際費用以預約確認信為準，如有任何疑問，歡迎<a href="#contact">與我們聯繫</a>。</p>
         </div>
-        <p class="booking-form__instructions" id="booking-form-instructions">請在表單內向下捲動，詳閱方案費率及使用規範，再依步驟填寫。上方試算僅供參考，實際費用請以表單說明及場地方確認為準。</p>
         <div class="booking-form__embed">
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd_rkPDR2x-OFtjLa94d8sTnBDbFRZTDbxzkChMmurdMmFuhw/viewform?embedded=true" width="900" height="1200" loading="lazy" title="潛水艇計畫多功能空間預約申請表" aria-describedby="booking-form-instructions"></iframe>
         </div>

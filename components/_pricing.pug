@@ -15,7 +15,7 @@ section.section.pricing#pricing
         .pricing-card__glow
         span.pricing-card__icon 🌙
         h3.pricing-card__title 平日方案
-        p.pricing-card__period 週一至週五
+        p.pricing-card__period 週一至週五 18:00 前
         .pricing-card__price
           span.pricing-card__currency NT$
           span.pricing-card__amount 350
@@ -31,8 +31,8 @@ section.section.pricing#pricing
       .pricing-card.pricing-card--featured.reveal.reveal-2
         .pricing-card__glow
         span.pricing-card__icon ☀️
-        h3.pricing-card__title 假日方案
-        p.pricing-card__period 週六、週日
+        h3.pricing-card__title 晚間／週末方案
+        p.pricing-card__period 平日 18:00 起、週末全天
         .pricing-card__price
           span.pricing-card__currency NT$
           span.pricing-card__amount 400
@@ -41,27 +41,26 @@ section.section.pricing#pricing
         ul.pricing-card__perks
           li 全場獨立使用
           li 落地鏡面、木質地板
-          li 假日人潮活躍社區
-          li 適合公開展演活動
-        p.pricing-card__note 非營利組織假日：NT$300 / 小時
+          li 跨 18:00 自動分段計費
+          li 可搭配優惠時段折抵
 
-      //- 4hr Package
+      //- Time-based discounts
       .pricing-card.reveal.reveal-3
         .pricing-card__glow
         span.pricing-card__icon ⏱️
-        h3.pricing-card__title 4小時方案
-        p.pricing-card__period 假日連續 4 小時
+        h3.pricing-card__title 優惠時段方案
+        p.pricing-card__period 完整涵蓋指定時段
         .pricing-card__price
           span.pricing-card__currency NT$
-          span.pricing-card__amount 1,600
-          span.pricing-card__unit / 4小時
+          span.pricing-card__amount 100
+          span.pricing-card__unit 元折抵
         .pricing-card__divider
         ul.pricing-card__perks
-          li 連續 4 小時包段
-          li 全場獨立使用
-          li 適合完整排練行程
-          li 可分攤團隊費用
-        p.pricing-card__note 非營利組織 4 小時：NT$1,200
+          li 09:00–13:00
+          li 13:30–17:30
+          li 18:00–22:00
+          li 連續滿 8 小時可折 NT$250
+        p.pricing-card__note 每次租借擇一優惠，不重複折抵
 
     //- Nonprofit banner
     .pricing__nonprofit.reveal.reveal-4
@@ -69,8 +68,6 @@ section.section.pricing#pricing
       div
         h3.pricing__nonprofit-title 非營利組織優惠方案
         p.pricing__nonprofit-text
-          | 非營利組織可洽談合作專案，享有
-          strong(style="color: var(--color-gold-light);") 七五折優惠
-          | ——假日每小時 NT$300、4 小時 NT$1,200。
+          | 非營利組織可洽談合作專案，優惠資格與費用由場地方確認。
           br
           | 歡迎主動聯繫討論長期合作！

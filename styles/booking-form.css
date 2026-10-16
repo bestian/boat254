@@ -37,6 +37,7 @@
     text-align: center;
 }
 
+.booking-form__instructions a,
 .booking-form__fallback a {
     font-weight: 700;
     text-decoration: underline;

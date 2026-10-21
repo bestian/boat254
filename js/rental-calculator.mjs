@@ -50,7 +50,7 @@ if (form) {
     if (quote.eveningMinutes) charges.push(`NT$400 × ${quote.eveningMinutes / 60} 小時`);
     detail.textContent = `${charges.join(' ＋ ')} = 基本費 ${money(quote.baseTotal)}`;
     notice.textContent = quote.discountType === 'eight-hour'
-      ? `連續滿 8 小時折 ${money(quote.discount)}，不再疊加時段優惠。`
+      ? `連續滿 8 小時折 ${money(quote.discount)}。`
       : quote.discountType === 'period'
         ? `完整涵蓋 ${quote.discountPeriod}，時段優惠折 ${money(quote.discount)}。`
         : '未符合優惠時段或連續 8 小時條件，依基本費試算。';

@@ -12,8 +12,11 @@ html(lang="zh-TW")
     include components/_features.pug
     include components/_pricing.pug
     include components/_booking_calendar.pug
+    include components/_rental_calculator.pug
+    include components/_booking_form.pug
     //- include components/_location.pug
     include components/_contact.pug
     include components/_footer.pug
 
     script(src="js/index.js" defer)
+    script(type="module" src="js/rental-calculator.mjs")

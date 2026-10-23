@@ -1,0 +1,50 @@
+// ==================== RENTAL CALCULATOR ====================
+section.section.section--teal.rental-calculator#rental-calculator(aria-labelledby="rental-calculator-title")
+  .container
+    .section-header
+      span.section-label 潛水艇計畫 · 租借費用試算
+      h2.section-title#rental-calculator-title
+        | 先選時段
+        span.text-gold 即時試算
+      span.gold-line
+      p.section-subtitle 填寫借用日期與起訖時間，自動計算平日、週末費率及適用優惠。
+
+    .rental-calculator__panel
+      form.rental-calculator__form#rental-calculator-form(aria-describedby="rental-calculator-rules")
+        fieldset.rental-calculator__fields(disabled)
+          legend 填寫租借條件
+          .rental-calculator__field
+            label(for="rental-date") 借用日期
+            input#rental-date(type="date" name="date" required aria-describedby="rental-quote-message")
+          .rental-calculator__times
+            .rental-calculator__field
+              label(for="rental-start") 開始時間
+              input#rental-start(type="time" name="start" step="60" required aria-describedby="rental-time-help rental-quote-message")
+            .rental-calculator__field
+              label(for="rental-end") 結束時間
+              input#rental-end(type="time" name="end" step="60" required aria-describedby="rental-time-help rental-quote-message")
+          p.rental-calculator__help#rental-time-help 請填寫同一天的時間；目前僅試算整小時租借，不自動進位。跨日或非整小時請另洽。
+
+      .rental-calculator__result(role="status" aria-live="polite" aria-atomic="true")
+        h3 預估租借費用
+        output.rental-calculator__amount#rental-quote-total(for="rental-date rental-start rental-end") —
+        p#rental-quote-message 請啟用 JavaScript，並填寫租借條件以試算費用。
+        p.rental-calculator__help#rental-quote-detail
+        p.rental-calculator__help#rental-quote-notice
+      noscript
+        p.rental-calculator__help 請啟用 JavaScript 以使用費用試算；也可依上方價目表，透過下方「聯絡我們」洽詢。
+
+    .rental-calculator__rules#rental-calculator-rules
+      p 基本費：週一至週五 18:00 前 NT$350／小時；18:00 起及週末全天 NT$400／小時。跨 18:00 依各費率的實際分鐘分拆計算，加總金額無條件進位至整元，再扣除適用優惠。
+      p 優惠時段方案：09:00–13:00、13:30–17:30、18:00–22:00。
+      p 完整涵蓋優惠時段折 NT$100；連續滿 8 小時折 NT$250。每次租借擇一優惠，不累加。
+      p 非營利組織、藝文團體、相關科系學生另享75折優惠。
+      p 本試算表僅提供參考，實際費用會透過預約確認信提供。
+      p
+        | 本試算表不等於場租預約，請填寫下方
+        a(href="#booking-form") 預約表單
+        | ，收到表單後會有工作夥伴與您聯繫。
+      p
+        | 如對於場租有任何疑問，歡迎
+        a(href="#contact") 與我們聯繫
+        | 。

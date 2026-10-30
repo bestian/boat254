@@ -109,14 +109,6 @@
         padding: 0 var(--space-xs);
     }
 
-    .pricing__grid {
-        max-width: 100%;
-    }
-
-    .pricing-card--featured::after {
-        font-size: 0.68rem;
-        padding: 3px 32px;
-    }
 
     .footer {
         padding-bottom: max(var(--space-lg), env(safe-area-inset-bottom));
@@ -161,9 +153,6 @@
         font-size: 1rem;
     }
 
-    .about__stat-value {
-        font-size: 1.65rem;
-    }
 
     .gallery__item img {
         min-height: 140px;

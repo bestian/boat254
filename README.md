@@ -42,7 +42,7 @@
 - 需求依據：[issue #8 本文與全部補充留言](https://github.com/bestian/boat254/issues/8)。全站採白底黑字，固定導覽列（含手機選單）與「聯絡我們」區塊使用 `#FFE76F`。共用色彩定義在 `styles/main.css` 的 `:root`，試算器及預約表單外框沿用同一組變數；內嵌 Google 內容不由本站改色。
 - 一般內文使用 Google Fonts 的 `Noto Sans TC`（思源黑體），標題保留既有的思源宋體。相簿、潛水艇空間照片及定價圖片皆為直角。
 - `components/_about.pug` 為新入口；背景依確認採用 `img_202605/小船照片 (1)_熱鬧的1F店內.jpg`，搭配淺色遮罩與前景黑字。標題為「屬於後港墘的交流客廳，持續發掘在地的大秘寶」。
-- 介紹文字依 [11/6 修正留言](https://github.com/bestian/boat254/issues/8#issuecomment-6688589534)，在「福利資源，」與「生活大小事，」後明確換行，其餘文案不變；手機版仍依可用寬度自然折行。
+- 介紹文字保留 [11/6 修正留言](https://github.com/bestian/boat254/issues/8#issuecomment-6688589534) 的既有換行，並依 [11/7 修訂留言](https://github.com/bestian/boat254/issues/8#issuecomment-6706513446)，在「這裡是一間咖啡廳，」、「為願景，」及「不定期舉辦社區交流活動，」後新增 `br.mobile-only`。沿用 `styles/responsive.css` 的 media query：寬度不超過 768px 時顯示新增換行，寬螢幕隱藏，維持原有換行；更窄螢幕仍可自然折行。
 - 社區成果依補充留言使用「143人次／社區跨世代交流」、「每週四／藝術治療駐點」、「3位／社區長者生活記憶分享」、「31人次／社區小幫手－代收包裹、手機教學、心情樹洞」。每組數據在上、說明在下，桌面四欄，手機兩欄。
 - `components/_pricing.pug` 以 `img_202611/小船254透明定價方案.png` 取代原三張方案卡；圖片可另開原尺寸檢視，手機依寬度等比例縮放。圖片下方顯示「非營利組織另有優惠」與另開分頁的[詳細場地說明](https://drive.google.com/file/d/1Z7IuHyxbermUaktl3AuWfBMOWLBXJDKM/view)。
 - 此次僅調整版型、配色與公開方案展示，不變更租借計價規則、Google 日曆或預約表單。方案圖片與外部場地文件由場地方維護，試算仍為參考，實際費用以預約確認信／訊息為準。
